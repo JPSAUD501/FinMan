@@ -1,17 +1,21 @@
+import { AdvConsole } from "./Functions/advancedConsole";
+import { TheFinManLogBot } from "./TheFinManLog_Bot/bot";
 import { TheFinManBot } from "./TheFinMan_Bot/bot";
 
 class StartSequence {
   static async start() {
-    console.log(`Loading the start sequence`);
+    
+    console.log("Starting TheFinManLog_Bot and AdvConsole...");
+    const theFinManLogBot = new TheFinManLogBot();
+    await theFinManLogBot.start();
+    const advConsole = new AdvConsole(theFinManLogBot);
+    console.log("TheFinManLog_Bot and AdvConsole started!");
 
-    const theFinManBot = new TheFinManBot();
-
-    console.log(`Running the start sequence...`);
-
+    advConsole.log(`Running the start sequence...`);
+    const theFinManBot = new TheFinManBot(advConsole);
     await theFinManBot.start();
     await theFinManBot.hear();
-
-    console.log(`Start sequence completed`);
+    advConsole.log(`Start sequence completed`);
   }
 }
 

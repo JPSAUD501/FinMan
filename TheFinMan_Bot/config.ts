@@ -3,8 +3,6 @@ dotenv.config();
 
 export default {
   telegram: {
-    theFinManBot: {
-      token: process.env.TELEGRAM_TOKEN || '',
-    }
+      token: process.env.TFMB_TELEGRAM_TOKEN || ''
   }
 }
