@@ -1,4 +1,5 @@
 import { AdvConsole } from "./Functions/advancedConsole";
+import { Server } from "./Server/server";
 import { TheFinManLogBot } from "./TheFinManLog_Bot/bot";
 import { TheFinManBot } from "./TheFinMan_Bot/bot";
 
@@ -12,6 +13,8 @@ class StartSequence {
     console.log("TheFinManLog_Bot and AdvConsole started!");
 
     advConsole.log(`Running the start sequence...`);
+    const server = new Server(advConsole);
+    await server.start();
     const theFinManBot = new TheFinManBot(advConsole);
     await theFinManBot.start();
     await theFinManBot.hear();
