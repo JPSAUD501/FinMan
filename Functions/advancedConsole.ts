@@ -11,10 +11,11 @@ export class AdvConsole {
 
   log (log: any) {
     console.log(log);
-    try {
-      this.bot.sendLog(log);
-    } catch (error) {
-      console.log(error);
-    }
+    this.bot.sendLog(log);
+  }
+
+  error (error: any) {
+    console.error(error);
+    this.bot.sendError(error);
   }
 }

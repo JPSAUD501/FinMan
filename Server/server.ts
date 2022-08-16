@@ -3,7 +3,7 @@ import fastify from 'fastify'
 import { AdvConsole } from '../Functions/advancedConsole'
 const port = parseInt(process.env.PORT || '3000')
 const host = process.env.HOST || '0.0.0.0'
-const server = fastify({ logger: true })
+const server = fastify()
 
 
 export class Server {
