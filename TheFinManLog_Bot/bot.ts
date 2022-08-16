@@ -35,8 +35,8 @@ export class TheFinManLogBot {
     setInterval(async () => {
       if (this.messageQueue.length <= 0) return;
       try {
-        await this.bot.telegram.sendMessage(config.telegram.logChannel, this.messageQueue[0]);
-        this.messageQueue.shift();
+        const message = this.messageQueue.shift() || '⚠';
+        await this.bot.telegram.sendMessage(config.telegram.logChannel, message);
       } catch (error) {
         console.log(error);
       }
