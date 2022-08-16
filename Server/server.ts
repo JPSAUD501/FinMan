@@ -30,6 +30,7 @@ export class Server {
         process.exit(1)
       }
       this.advConsole.log(`Server listening at ${address}`)
+      this.advConsole.log(`Heroku Link: https://thefinmanbot.herokuapp.com/`)
     })
   }
 }
