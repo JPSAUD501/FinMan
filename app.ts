@@ -5,7 +5,6 @@ import { TheFinManBot } from "./TheFinMan_Bot/bot";
 
 class StartSequence {
   static async start() {
-    
     console.log("Starting TheFinManLog_Bot and AdvConsole...");
     const theFinManLogBot = new TheFinManLogBot();
     await theFinManLogBot.start();

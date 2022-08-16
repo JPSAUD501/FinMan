@@ -24,11 +24,11 @@ export class TheFinManLogBot {
   }
 
   sendLog(log: any) {
-    this.messageQueue.push('🔵 ' + log.toString());
+    this.messageQueue.push('🔵 - ' + log.toString());
   }
 
   sendError(error: any) {
-    this.messageQueue.push('🔴 ' + error.toString());
+    this.messageQueue.push('🔴 - ' + error.toString());
   }
 
   startLogQueue() {

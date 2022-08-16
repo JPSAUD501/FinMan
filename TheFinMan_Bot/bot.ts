@@ -28,12 +28,12 @@ export class TheFinManBot {
     })
 
     this.bot.command('privacidade', ctx => {
-      ctx.reply('O FinMan é um software livre, gratuito e de código aberto que não armazena nenhuma informação pessoal alem do email do comprador e o ID do grupo do Telegram vinculado a ele. Todos seus gastos são armazenados em uma planilha online de sua propriedade em você pode a qualquer momento impedir que eu leia ou edite a mesma. O Telegram usa criptografia para garantir que ninguém além dos integrantes do grupo leiam suas mensagens!\n\nSaiba mais usando os botoes abaixo!', {
+      ctx.reply('O FinMan é um software livre, gratuito e de código aberto que não armazena nenhuma informação pessoal sua além do email do comprador e o ID do grupo do Telegram vinculado a ele. Todos seus gastos são armazenados em uma planilha online de sua propriedade em você pode a qualquer momento restringir seu acesso a leitura ou edição da mesma. O Telegram usa criptografia para garantir que ninguém além dos integrantes do grupo leiam suas mensagens!\n\nSaiba mais usando os botoes abaixo!', {
         parse_mode: 'Markdown',
         ...Markup.inlineKeyboard([
           Markup.button.url('Código Aberto', 'https://pt.wikipedia.org/wiki/Software_de_c%C3%B3digo_aberto'),
           Markup.button.url('Segurança Telegram', 'https://telegram.org/faq#p-quao-seguro-e-o-telegram'),
-          Markup.button.url('Código fonte do FinMan', 'https://github.com/JPSAUD501/FinMan')
+          Markup.button.url('Código Fonte', 'https://github.com/JPSAUD501/FinMan')
         ])
       });
     })
