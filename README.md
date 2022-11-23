@@ -1,3 +1,3 @@
 # FinMan
 
-Gerenciador de gastos automatizado usando planilhas.
+Automated expense manager using spreadsheets.
